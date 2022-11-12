@@ -30,7 +30,7 @@ public class Client {
 			// Output stream 
 			DataOutputStream outSocketStream = new DataOutputStream(socket.getOutputStream());
 			
-			do {
+			while (!clientMsg.equals("quit")) {
 				// Prompt user to enter some text or 'quit'
 				System.out.print("Client: inserisci il messaggio da inviare> ");
 				//clientMsg = scanner.nextLine();
@@ -44,7 +44,7 @@ public class Client {
 				// Read data from socket input stream
 				serverMsg = inSocketStream.readUTF();
 				System.out.println("Client: ricevuto il messaggio: " + serverMsg);
-			}while (!clientMsg.equals("quit"));
+			}
 
 			// Close resources
 			outSocketStream.close();
