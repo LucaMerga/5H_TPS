@@ -26,7 +26,7 @@ public class Server {
 			DataOutputStream outStream = new DataOutputStream(clientSocket.getOutputStream());	
 
 			// Scambio di dati tra client e server
-			do {
+			while(!clientMsg.equals("quit")) {
 				//riporto a 0 vocali,consonanti e caratteri speciali
 				v=0;c=0;cs=0;
 				
@@ -67,7 +67,7 @@ public class Server {
 					outStream.flush();
 					System.out.println("Echo from server : " + clientMsg + " Lunghezza: " + length + " Vocali: " + v + " Consonanti: " + c + " Caratteri speciali: " + cs);
 				}
-			}while(!clientMsg.equals("quit"));
+			}
 
 
 			// Close resources
