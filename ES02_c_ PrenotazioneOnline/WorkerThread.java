@@ -66,7 +66,7 @@ public class WorkerThread extends Thread{
                       break;
                             
 				  case "Prenotazione":
-					  System.out.println("ServerTread: " + this.getName() +" (prenotazione) numuero="+  cMsgArr[1] + " nome=" +  cMsgArr[2] );
+					  System.out.println("ServerTread: " + this.getName() +" (prenotazione) numero="+  cMsgArr[1] + " nome=" +  cMsgArr[2] );
 					  if (isNumeric(cMsgArr[1]) == true) {
 						  int num=Integer.parseInt(cMsgArr[1]);
 						  String name=joinArray(cMsgArr , 2 , cMsgArr.length-1 );
