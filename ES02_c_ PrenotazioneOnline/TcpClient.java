@@ -15,14 +15,14 @@ public class TcpClient {
 			int severPort=8698;
 						
 			String clientMessage = "";
-			String serverMessage = "";
-			
-			printMenu();	
+			String serverMessage = "";	
 			
 			// Create connection to server socket
 			System.out.print("Client: Tentativo di connessione server=" + severAddress + ":" + severPort + " ... ");
 			Socket socket = new Socket(severAddress, severPort); //
 			System.out.println("Connected");
+			
+			printMenu();
 			
 			// Create streams to read/write data
 			DataInputStream inStream   = new DataInputStream(socket.getInputStream());
