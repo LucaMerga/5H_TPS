@@ -13,9 +13,7 @@ class TcpServer extends Thread {
 
 	public void run() {
 		try {
-
 			serverClientSocket.close();
-
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
