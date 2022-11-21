@@ -35,7 +35,7 @@ public class MultithreadedTcpServer {
 			TcpServer sa = new TcpServer(serverClientSocket, count);
 			
 			System.out.println("Client: invio il numero: " + count);
-			stringa = ""+count;
+			stringa = ""+count;	//writeUTF e readUTF scrivono e leggono solo stringhe quindi ne creo una contenente il contatore in modo da poterlo inviare
 			outStream.writeUTF(stringa);
 			outStream.flush();
 			
