@@ -11,8 +11,7 @@ public class Reservation {
     		reservations[i]="Posto libero";
     	}
     }
-    
-     
+         
     public synchronized String getReservations() {
     	String r="";
     	for (int i=0 ; i<reservations.length ; i++ ) {
@@ -29,6 +28,4 @@ public class Reservation {
     	} 
         return result;
     }
- 
-    
 }
