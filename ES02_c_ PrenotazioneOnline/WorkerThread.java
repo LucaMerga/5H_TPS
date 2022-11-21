@@ -108,7 +108,4 @@ public class WorkerThread extends Thread{
 			System.out.println("Client -" + clientNo + " exit!! ");
 		}
 	}
-
-	
-
 }
