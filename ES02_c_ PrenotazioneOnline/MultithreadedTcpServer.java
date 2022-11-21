@@ -11,10 +11,10 @@ public class MultithreadedTcpServer {
 	
 	public static void main(String[] args) throws Exception {
 	   
-		int count = 0;       // conta il numero di client
+		int count = 0;       //contatore per il numero di client
 		
 		int severPort=8698;
-		int Size=10;  // numero di posti
+		int Size=10;  //numero di posti
 		Reservation reservations= new Reservation(Size);
 		
 		// Listen to port
@@ -26,13 +26,12 @@ public class MultithreadedTcpServer {
 			// Start accepting requests and wait until client connects
 			Socket serverClientSocket = socket.accept();  // bloccante
 			
-			count++;
+			count++;	//incremento il contatore
 			
 			System.out.println("Server: Serving Client " + count);
 			// Handle the client communication
-			WorkerThread wt = new WorkerThread( "Thread " + count, serverClientSocket, count , reservations);
-			//sa.setName("Thread-Numero-" +count);  
-			wt.start();  // non Ã¨ bloccante
+			WorkerThread wt = new WorkerThread( "Thread " + count, serverClientSocket, count , reservations); 
+			wt.start();  // non  bloccante
 		}
 	}
 }
