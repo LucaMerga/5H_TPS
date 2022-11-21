@@ -55,7 +55,6 @@ public class TcpClient {
 		}
 	}
 	
-	
 	public static void printMenu() {
 		System.out.println("Comandi disponibili");
 		System.out.println("  Help - mostra i comandi");
