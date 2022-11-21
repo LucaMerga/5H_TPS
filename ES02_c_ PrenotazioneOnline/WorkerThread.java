@@ -86,7 +86,7 @@ public class WorkerThread extends Thread{
 					default:	//comando non trovato
 						sMsg="Command " + cMsg + " not found";
 						break;
-			}
+				}
 				
 				System.out.println("ServerTread: " + this.getName() + " invio risposta " + sMsg );
 				outStream.writeUTF(sMsg);
