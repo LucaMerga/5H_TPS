@@ -34,7 +34,5 @@ public class MultithreadedTcpServer {
 			//sa.setName("Thread-Numero-" +count);  
 			wt.start();  // non Ã¨ bloccante
 		}
-			
-
 	}
 }
