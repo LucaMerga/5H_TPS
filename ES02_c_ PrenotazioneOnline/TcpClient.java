@@ -19,10 +19,10 @@ public class TcpClient {
 			
 			// Create connection to server socket
 			System.out.print("Client: Tentativo di connessione server=" + severAddress + ":" + severPort + " ... ");
-			Socket socket = new Socket(severAddress, severPort); //
+			Socket socket = new Socket(severAddress, severPort);
 			System.out.println("Connected");
 			
-			printMenu();
+			printMenu();	//stampo la funzione menu che indica i comandi
 			
 			// Create streams to read/write data
 			DataInputStream inStream   = new DataInputStream(socket.getInputStream());
@@ -34,7 +34,7 @@ public class TcpClient {
 
 				// Prompt user to enter some number or 'end'
 				clientMessage = prompt();
-			    System.out.println("Client: invio il messaggio: " + clientMessage);
+			    	System.out.println("Client: invio il messaggio: " + clientMessage);
 				outStream.writeUTF(clientMessage);    // bloccanre
 				outStream.flush();
 				// Read data from socket input stream
@@ -55,7 +55,7 @@ public class TcpClient {
 		}
 	}
 	
-	public static void printMenu() {
+	public static void printMenu() {	//funzione con i comandi
 		System.out.println("Comandi disponibili");
 		System.out.println("  Help - mostra i comandi");
 		System.out.println("  Info - mostra i posti e le prenotazioni");
@@ -64,7 +64,7 @@ public class TcpClient {
 
 	}
 	
-	public static String prompt() {
+	public static String prompt() {	//funzione con inserimento e lettura del messaggio
 		scanner = new Scanner(System.in);
 		System.out.print("inserisci comando> ");
 		String cmd = scanner.nextLine();
