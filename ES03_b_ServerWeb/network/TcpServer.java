@@ -77,7 +77,7 @@ public class TcpServer {
 						serverMsg += "Errore";           
                 }
 				System.out.println(serverMsg + "\n");	
-				outStream.write(clientMsg.getBytes());
+				outStream.write(serverMsg.getBytes());
 				outStream.flush();
 
 				System.out.println("\n....................... Fine ricezione dati\n");
