@@ -54,28 +54,28 @@ public class TcpServer {
 				switch(clientMsgSplit[1]) {
 					case "/": 
 						serverMsg += "Saluti dal web server Java di Luca Merga";
-                        break;
+                        			break;
 
-                    case "/accendi":
+                   			case "/accendi":
 						serverMsg += "Accensione Luci...<br>\n<b>Luci accese</b>";
-                        break;
+                        			break;
 
-                    case "/spegni":
+                    			case "/spegni":
 						serverMsg += "Spegnimento Luci...<br>\n<b>Luci spente</b>";
-                        break;	
+                        			break;	
 						
 					case "/favicon.ico":
 						serverMsg += "";
-                        break;
+                        			break;
 
 					case "/esci":
 						serverMsg += "Fine esecuzione server";
 						endConn = true;
-                        break;
+                        			break;
 
-                    default: 
+                    			default: 
 						serverMsg += "Errore";           
-                }
+                		}
 				System.out.println(serverMsg + "\n");	
 				outStream.write(serverMsg.getBytes());
 				outStream.flush();
