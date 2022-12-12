@@ -57,11 +57,11 @@ public class TcpServer {
                         break;
 
                     case "/accendi":
-						serverMsg += "Accensione Luci...\n<b>Luci accese</b>";
+						serverMsg += "Accensione Luci...<br>\n<b>Luci accese</b>";
                         break;
 
                     case "/spegni":
-						serverMsg += "Spegnimento Luci...\n<b>Luci spente</b>";
+						serverMsg += "Spegnimento Luci...<br>\n<b>Luci spente</b>";
                         break;	
 						
 					case "/favicon.ico":
