@@ -47,13 +47,13 @@ public class TcpServer {
 				String clientMsgSplit[]=clientMsg.split("\\s+");
 
 				//Invio dei dati su stream di rete al client
-				clientMsg = "HTTP/1.1 200 OK\r\n";
+				serverMsg = "HTTP/1.1 200 OK\r\n";
 				//clientMsg += "Connection: close\r\n";
-				clientMsg += "Content-Type: text/html\r\n";
-				clientMsg += "\r\n";
+				serverMsg += "Content-Type: text/html\r\n";
+				serverMsg += "\r\n";
 				switch(clientMsgSplit[1]) {
 					case "/": 
-						clientMsg += "Saluti dal web server Java di Luca Merga";
+						serverMsg += "Saluti dal web server Java di Luca Merga";
                         break;
 
                     case "/accendi":
