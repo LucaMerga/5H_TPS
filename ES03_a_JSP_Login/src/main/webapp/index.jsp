@@ -7,7 +7,7 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>Es 02 jsp</h1>
+	<h1>Es 02 jsp Merga</h1>
 	<br><br>
 	<a href="login.jsp">Login</a>
 </body>
